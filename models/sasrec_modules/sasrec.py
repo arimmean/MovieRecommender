@@ -16,7 +16,7 @@ class SASRec(nn.Module):
         self.num_heads = args.num_heads
 
         # Item embedding
-        self.item_emb = nn.Embedding(self.num_items + 1, self.hidden, padding_idx=0)
+        self.item_emb = nn.Embedding(self.num_items + 2, self.hidden, padding_idx=0)
         self.pos_emb = nn.Embedding(self.maxlen, self.hidden)
         
         # Transformer blocks
